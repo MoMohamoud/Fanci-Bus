@@ -1,0 +1,38 @@
+
+
+<?php 
+$html = "";
+$url = "http://api.translink.ca/rttiapi/v1/stops/53717/estimates?apikey=CNERL2k7LSBtSK7I83CQ&count=6&timeframe=1440";
+$xml = simplexml_load_file($url);
+// var_dump($xml);
+
+
+	$title = $xml->NextBus->RouteNo;
+	$dest = $xml->NextBus->RouteName;
+	// $Schedul = $xml->NextBus->Schedules->Schedule->ExpectedLeaveTime;
+	$Schedules = $xml->NextBus->Schedules;
+
+
+	foreach ($Schedules as $schedule) {
+		 echo $test = $schedule->ExpectedLeaveTime[0];
+		 echo '<h1> $test; <h1>';
+	}
+
+	// for ($i=0; $i < 10 ; $i++) { 
+	// 	$Single = $xml->NextBus->Schedules->Schedule[$i];
+	// }
+	// echo $Single[-1];
+	
+	
+// var_dump($schedule);
+var_dump($test);
+
+// var_dump($Single);
+
+
+ ?>
+
+ <h2><?php echo $title; ?></h2>
+ <h2><?php echo $dest; ?></h2>
+ <!-- <p><?php echo $schedul; ?></p> -->
+ <p><?php echo $expected; ?></p>
