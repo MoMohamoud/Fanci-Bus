@@ -32,33 +32,24 @@
 
 <body class="bg" id="hidden">  
 
-<?php if (is_front_page() || is_tree(10) ) : ?>
+<?php // if (is_front_page() || is_tree(10) ) : ?>
 
 
-<div class="content-wrap menu-wrap">
-<a class="navbar-brand-sidemenu" href="<?php bloginfo('url' ); ?>"><img class="img-responsive" src="<?php echo get_stylesheet_directory_uri();?>/img/finalfancifotos3.png"></a>
-        <nav class="menu">
+  <div class="content-wrap menu-wrap">
+    <a class="navbar-brand-sidemenu" href="<?php bloginfo('url' ); ?>"><img class="img-responsive" src="<?php echo get_stylesheet_directory_uri();?>/img/finalfancifotos3.png"></a>
+    <nav class="menu">
+     <div class="icon-list">
+      <?wp_nav_menu( array( 'theme_location' => 'new-menu', 'container_class' => 'navbar-nav' ) ); ?>
+    </div>
+    </nav>
+  <button class="close-button" id="close-button">Close Menu</button>
+  </div>
+  <button class="menu-button" id="open-button">Open Menu</button>
 
-         <div class="icon-list">
-           <!--  <a href="<?php // bloginfo( 'url' ); ?>/gallery"><i class="fa fa-fw fa-star-o"></i><span>Gallery</span></a>
-            <a href="#"><i class="fa fa-fw fa-bell-o"></i><span>Engagement</span></a>
-            <a href="#"><i class="fa fa-fw fa-envelope-o"></i><span>Info and FAQ</span></a>
-            <a href="#"><i class="fa fa-fw fa-comment-o"></i><span>About Us</span></a>
-            <a href="#"><i class="fa fa-fw fa-newspaper-o"></i><span>Packages</span></a> -->
-<?wp_nav_menu( array( 'theme_location' => 'new-menu', 'container_class' => 'navbar-nav' ) ); ?>
-          </div>
-
-
-        </nav>
-        <button class="close-button" id="close-button">Close Menu</button>
-      </div>
-      <button class="menu-button" id="open-button">Open Menu</button>
-
-<?php else: ?>
-
+<?php // else: ?>
+<?php /* 
 
  <nav class="navbar navbar-default navbar-custom " role="navigation">
-
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
@@ -74,30 +65,26 @@
       </div>
       <div class="collapse navbar-collapse navbar-inner" id="collapse">
         <ul class="nav navbar-nav navbar-right">
-          <!-- <li class="active"><a href="<?php //  bloginfo('url' ); ?>">Home</a></li>
-          <li><a href="gallery">Galleries</a></li>
-          <li><a href="#">Packages</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Clients</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="<?php // bloginfo('url' ); ?>/bus/">Bus</a></li> -->
-<li> <?wp_nav_menu( array( 'theme_location' => 'new-menu', 'container_class' => 'navbar-nav' ) ); ?> </li>
+          <li> <?wp_nav_menu( array( 'theme_location' => 'new-menu', 'container_class' => 'navbar-nav' ) ); ?> </li>
         </ul>
-
       </div> 
     </div>
   </nav>
+
+  */?>
   
-<?php endif; ?>
+<?php // endif; ?>
 
 
-
-<?php if (!(is_front_page() || is_page(5) || is_page(23))): ?>
+<?php /*  
+<?php if (!(is_front_page() || is_page(5) || is_page(23)) || is_page_template( $contactPage )): ?>
 
   <div class="container content">
   
 
 <?php endif ?>
+
+*/ ?>
 
 
 

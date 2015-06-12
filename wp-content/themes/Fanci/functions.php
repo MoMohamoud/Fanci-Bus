@@ -10,10 +10,18 @@ function wpbootstrap_scripts_with_jquery()
 	// For either a plugin or a theme, you can then enqueue the script:
 	wp_enqueue_script( 'custom-script' );
 
-	// wp_register_script( 'custom', get_template_directory_uri() . '/js/script.js');
-	// 	wp_register( 'custom', get_template_directory_uri() . '/js/main.js' );
-	// wp_register( 'custom', get_template_directory_uri() . '/js/classie.js' );
-	// wp_enqueue_script( 'custom' );
+	wp_register_script( 'custom-js', get_template_directory_uri() . '/js/script.js');
+	wp_enqueue_script( 'custom-js' );
+
+  wp_register( 'main-js', get_template_directory_uri() . '/js/main.js', array( 'jquery' ) );
+  wp_enqueue_script( 'main-js' );
+
+  wp_register( 'swipebox', get_template_directory_uri() . '/js/jquery.swipebox.min.js', array( 'jquery' ) );
+
+
+  
+
+  // wp_register( 'custom', get_template_directory_uri() . '/js/classie.js' );
 
 	// wp_enqueue_style( 'slider', get_stylesheet_uri() . '/css/menu_sideslide.css' );
 
