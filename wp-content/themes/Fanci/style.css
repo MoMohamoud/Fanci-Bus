@@ -14,29 +14,25 @@ Version 1.0
 
 
 
-
+html{
+  height: 100%;
+}
 
 body{
 	
 	margin:0;
 	padding:0;
 	height:100%;
-
-
 	perspective: 1px;
 	transform-style: preserve-3d;
-  
   overflow-y: scroll;
   overflow-x: hidden;
-  
 }
 
-html{height: 100%;
-  /*overflow: hidden;*/
-}
+
 
 html, body, .container { height: 100%; }
-body > .container { height: auto; /*min-height: 100%;*/ }
+body > .container { height: auto; min-height: 100%; }
 
 blockquote{
   border: none;
@@ -445,6 +441,10 @@ a:hover {
 
     width: 100%;
   bottom: 0;
+
+    position:relative;
+    width:100%;
+    bottom:0; /* stick to bottom */
 }
 
 .container{

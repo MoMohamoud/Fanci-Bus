@@ -35,11 +35,9 @@ $(document).ready(function () {
 		}, 2000);
 	$('.text-info').fadeIn();
 
-		$( '.swipebox' ).swipebox();
-
-
-
-
+	$( '.swipebox' ).swipebox();
 
 
 });
+
+
